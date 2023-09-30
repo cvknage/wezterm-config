@@ -1,6 +1,15 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
+local scheme_for_appearance = function(appearance)
+	-- "Catppuccin Mocha" -- or Macchiato, Frappe, Latte
+	if appearance:find("Dark") then
+		return "Catppuccin Mocha"
+	else
+		return "Catppuccin Frappe"
+	end
+end
+
 -- This table will hold the configuration.
 local config = {}
 
@@ -15,7 +24,7 @@ config.initial_cols = 160
 config.initial_rows = 40
 
 -- For example, changing the color scheme:
-config.color_scheme = "AdventureTime"
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 -- and finally, return the configuration to wezterm
 return config
