@@ -25,6 +25,7 @@ config.initial_rows = 40
 
 -- For example, changing the color scheme:
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.window_background_opacity = 0.95
 
 -- and finally, return the configuration to wezterm
 return config
