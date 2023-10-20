@@ -23,7 +23,8 @@ end
 config.initial_cols = 160
 config.initial_rows = 40
 
--- For example, changing the color scheme:
+config.window_close_confirmation = "NeverPrompt"
+
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.window_background_opacity = 0.95
 
