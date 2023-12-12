@@ -2,12 +2,12 @@
 local wezterm = require("wezterm")
 
 local scheme_for_appearance = function(appearance)
-	-- "Catppuccin Mocha" -- or Macchiato, Frappe, Latte
-	if appearance:find("Dark") then
-		return "Catppuccin Mocha"
-	else
-		return "Catppuccin Frappe"
-	end
+  -- "Catppuccin Mocha" -- or Macchiato, Frappe, Latte
+  if appearance:find("Dark") then
+    return "Catppuccin Mocha"
+  else
+    return "Catppuccin Frappe"
+  end
 end
 
 -- This table will hold the configuration.
@@ -16,7 +16,7 @@ local config = {}
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
 if wezterm.config_builder then
-	config = wezterm.config_builder()
+  config = wezterm.config_builder()
 end
 
 -- This is where you actually apply your config choices
